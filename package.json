@@ -2,12 +2,18 @@
   "name": "@microfrontends/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "server": "node apps/server/index.js",
+    "build-mfes": "nx run-many --target=build --projects=mfe1,mfe2",
+    "app": "npm run server & nx serve shell" 
+  },
   "private": true,
   "dependencies": {
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
     "@swc/helpers": "~0.5.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },

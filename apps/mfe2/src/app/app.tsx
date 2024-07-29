@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { APP_NAME } from '../consts';
 
 const StyledApp = styled.div({
   backgroundColor: 'tomato',
@@ -11,7 +12,7 @@ const StyledApp = styled.div({
 export function App() {
   return (
     <StyledApp>
-      Hello from <b>mfe2</b>
+      Hello from <b>{APP_NAME}</b>
     </StyledApp>
   );
 }
