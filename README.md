@@ -10,7 +10,7 @@
 
 In this setup, `shell`, `mfe1`, and `mfe2` are independent React applications, while the `server` is a simple Express server that serves their bundles. The `shell` application uses a component called `MfeLoader` to dynamically load `mfe1` and `mfe2` via the `server`, which provides their bundles as `application/javascript`.
 
-Each microfrontend exports an object to the global `window` in its `main.tsx`. For instance, `window.mfe1` might be an object with a mount function: `window.mfe1 = { mount: (container) => { ... } }`.
+Each microfrontend exports an object to the global `window` in its `main.tsx`. For instance, `window.mfe1` might be an object with a mount function: `window.mfe1 = { mount: (container) => { ... } }`, this `mount` function is used by `MfeLoader` to mount the micro-frontend into the `shell`.
 
 In the shell application’s `index.html`, there is an `import map` that maps each microfrontend’s application name to its corresponding remote bundle URL. This allows `MfeLoader` to import the microfrontend using its app name, which is then resolved to the correct remote URL based on the import map.
 
