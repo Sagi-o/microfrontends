@@ -20,5 +20,5 @@ Additionally, import maps can be used to share libraries at runtime across micro
 
 ## Start the app
 
-1. To build the micro-frontends run `npm run build-mfes`
-2. To run the shell app and the server run `npm run app`
+1. To build `mfe1` and `mfe2` run `npm run build-mfes`
+2. To run the `shell` app and the `server` run `npm run app`
