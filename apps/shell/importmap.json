@@ -1,0 +1,6 @@
+{
+    "imports": {
+      "mfe1": "https://example.com/modules/colors/",
+      "mfe2": "https://example.com/modules/shapes/"
+    }
+}
