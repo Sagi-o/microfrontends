@@ -8,7 +8,7 @@
 
 ## Project Explanation
 
-In this setup, `shell`, `mfe1`, and `mfe2` are independent React applications, while the `server` is a simple Express server that serves their bundles. The `shell` application uses a component called `MfeLoader` to dynamically load `mfe1` and `mfe2` via `the` server, which provides their bundles as `application/javascript`.
+In this setup, `shell`, `mfe1`, and `mfe2` are independent React applications, while the `server` is a simple Express server that serves their bundles. The `shell` application uses a component called `MfeLoader` to dynamically load `mfe1` and `mfe2` via the `server`, which provides their bundles as `application/javascript`.
 
 Each microfrontend exports an object to the global `window` in its `main.tsx`. For instance, `window.mfe1` might be an object with a mount function: `window.mfe1 = { mount: (container) => { ... } }`.
 
